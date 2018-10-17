@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vue.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.js"></script>
+
+</head>
+<body>
+    <div class="allContent">
+
+        <div class="head">
+            <header>
+                <div class="center">
+                    <h1 class="whitefont">Умный дом</h1>
+                    <img src="assets/img/arrow.png"
+                         v-bind:class="[ 'arrow' ,{arrowup: seen}  ]" @click="seen = !seen" alt="">
+                </div>
+            </header>
+            <nav v-if="seen">
+                <div class="center">
+                    <ul class="nav"   @click="setAlert">
+
+                        <template v-if="auth">
+
+                            <li v-for="tab in tabs.auth"
+                                v-bind:key="tab.name"
+                                v-on:click="currentTab = tab.name"
+                            >{{ tab.display }}</li>
+
+                        </template>
+                        <template v-else>
+
+                            <li v-for="tab in tabs.noauth"
+                                v-bind:key="tab.name"
+                                v-on:click="currentTab = tab.name"
+                            >{{ tab.display }}</li>
+
+                        </template>
+
+
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="center">
+
+            <div class="block" >
+
+
+                <component v-bind:is="currentTabComponent">
+                </component>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

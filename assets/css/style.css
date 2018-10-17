@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+body{
+   background: #f0f2f5;
+}
+
+header{
+    background: #3366cc;
+   /* background: #333333;*/
+    width: 100%;
+    height: 210px;
+    position: relative;
+}
+
+.arrow{
+    width: 30px;
+    height: 30px;
+    display: none;
+    transition: 380ms;
+}
+
+.arrowup{
+    transform: rotate(0.5turn);
+}
+
+.center{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.whitefont{
+    color: white;
+}
+
+nav{
+    width: 100%;
+    background: #6699cc;
+   /* background: #666666;*/
+}
+
+header > div> h1{
+    position: relative;
+    top: 90px;
+    left: 20px;
+    font-weight: normal;
+    font-size: 42px;
+}
+
+.nav>li{
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav>li:hover{
+    background: #336699;
+}
+
+.block{
+    background: white;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    margin: 30px 0;
+    padding: 10px;
+    color: #333333;
+    position: relative;
+}
+
+.login{
+    width: 300px;
+    margin: 50px auto;
+}
+
+.login>label{
+    font-size: 18px;
+    font-weight: normal;
+    color: #666666;
+}
+
+.login > *{
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.login > input{
+    border-width: 1px;
+    padding: 8px 0;
+    font-size: 16px;
+    border-color: #999999;
+}
+
+.submit{
+    background: #669999;
+
+}
+
+.btn{
+    padding: 8px 2px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+.home{
+    color: #666666;
+    display: none;
+}
+
+.devices{
+    color: #666666;
+    display: none;
+}
+
+.label{
+    color: #666666;
+    padding: 10px;
+    border-bottom: solid #b8b8b8 1px;
+}
+
+.list{
+    padding: 0 25px;
+}
+
+.row{
+    width: 100%;
+}
+
+.list > div:not(.addMacros){
+    border-bottom: solid #b8b8b8 1px;
+    display: grid;
+    grid-template-columns: 120px auto 120px ;
+}
+
+.addMacros{
+    border-bottom: solid #b8b8b8 1px;
+}
+.addMacros>table{
+    width: 100%;
+    border-spacing: 5px 10px;
+}
+
+.addMacros>table>*{
+    font-size: 15px;
+    text-align: left;
+}
+
+.addMacros>table>tbody>tr>td>*{
+    width: calc(100% - 20px);
+}
+
+.addMacros>table>tbody>tr>td>.btn{
+    width: 140px;
+    padding: 6px;
+}
+
+input{
+    border-style: solid;
+}
+
+.addMacros>table>tbody>tr>td>input{
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #bfbfbf;
+}
+
+.list > div > *{
+    margin: 20px 10px;
+    align-self: center;
+}
+
+.list > div > img{
+    min-height: 100px;
+    width: 100px;
+    border: solid #b8b8b8 1px;
+    border-radius: 5px;
+}
+
+.list:hover{
+    cursor: pointer;
+}
+
+
+.green{
+    color: #336633;
+}
+
+.yellow{
+    color: #cccc66;
+}
+
+.danger{
+    background: #b8323d;
+}
+
+.error{
+    color: #b8323d;
+}
+
+.macros{
+    position: relative;
+    display: none;
+}
+
+.right{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.btnpanel > a{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit{
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #bfbfbf;
+    max-width: 50px;
+}
+
+.btnValue{
+    padding: 4px 10px;
+    background: #c0c0c0;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.active{
+    background: #666666;
+}
+
+.macrosAddButton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 95px;
+}
+
+@media (max-width: 912px){
+
+
+    .block{
+        width: calc(100% - 20px);
+        margin: 0 0;
+        height: calc(100vh - 72px);
+        overflow: auto;
+    }
+
+    .center{
+        width: 100%;
+    }
+
+    .nav>li{
+        display: block;
+        width: calc(100% - 30px);
+    }
+
+    header > div> h1{
+        left: 0;
+        top: 0;
+        padding: 10px 30px;
+        font-size: 28px;
+    }
+
+    .arrow{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .head{
+        width: 100%;
+    }
+
+    header{
+        height: auto;
+    }
+
+    nav{
+        background: rgba(51, 102, 204, 0.87);
+        position: absolute;
+        top: 52px;
+        z-index: 300;
+    }
+
+    .nav>li:hover{
+        background: rgba(38, 68, 136, 0.98);;
+    }
+
+}
